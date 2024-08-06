@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Column;
 
 @Entity
 public class Historico {
@@ -12,9 +13,16 @@ public class Historico {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "x", nullable = false)
     private double x;
-    private double y;
+
+    @Column(name = "operacao", nullable = false)
     private String operacao;
+
+    @Column(name = "y", nullable = false)
+    private double y;
+
+    @Column(name = "resultado", nullable = false)
     private double resultado;
 
     // Construtor sem argumentos
