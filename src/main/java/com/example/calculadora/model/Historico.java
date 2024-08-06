@@ -7,6 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Historico {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -15,6 +16,10 @@ public class Historico {
     private double y;
     private String operacao;
     private double resultado;
+
+    // Construtor sem argumentos
+    public Historico() {
+    }
 
     // Getters e Setters
     public Long getId() {
